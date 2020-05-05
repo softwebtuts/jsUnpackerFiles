@@ -1,12 +1,3 @@
-/**
- * @name  de4js
- * @description  JavaScript Deobfuscator and Unpacker
- * @author  Zzbaivong <Zzbaivong@gmail.com> (https://lelinhtinh.github.io)
- * @version  1.6.3
- * @copyright  Zzbaivong 2017
- * @license  MIT
- */
-
 self.addEventListener('message', function (e) {
     var source = e.data.source;
    if (e.data.beautify) {
