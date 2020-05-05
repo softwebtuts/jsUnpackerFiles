@@ -14,7 +14,7 @@ self.addEventListener('message', function (e) {
         self._window = self.window;
         self.window = {};
 
-        self.importScripts('/de4js/assets/js/lib/js-beautify/beautify.min.js');
+        self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/beautify.min.js');
 
         source = self.window.js_beautify(source, {
             unescape_strings: true,
@@ -27,7 +27,7 @@ self.addEventListener('message', function (e) {
     }
 
     try {
-        self.importScripts('/de4js/assets/js/lib/highlight-js/highlight.min.js');
+        self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/highlight.min.js');
 
         source = self.hljs.highlight('javascript', source).value;
     } catch (err) {
