@@ -19,9 +19,8 @@ self.addEventListener('message', function (e) {
    }
 
     try {
-    //self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/highlight.min.js');
-    //source = self.hljs.highlight('javascript', source).value;
-    hljs.initHighlighting();
+    self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/highlight.min.js');
+    source = self.hljs.highlight('javascript', source).value;
     } catch (err) {
         console.log(err);
     }
