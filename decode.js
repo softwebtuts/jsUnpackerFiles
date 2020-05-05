@@ -80,11 +80,11 @@ self.addEventListener('message', function (e) {
         try {
             self._window = self.window;
             self.window = {};
-            self.importScripts('/de4js/assets/js/lib/jsfuck/jsfuck.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/jsfuck.js');
             self.JSFuck = self.window.JSFuck;
             self.window = self._window;
 
-            self.importScripts('/de4js/assets/js/lib/enkhee-osiris/decoder-jsfuck.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/decoder-jsfuck.js');
 
             source = JSFuckDecode.decode(source);
         } catch (err) {
@@ -92,7 +92,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'aaencode') {
         try {
-            self.importScripts('/de4js/assets/js/lib/cat-in-136/aadecode.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/aadecode.js');
 
             source = AADecode.decode(source);
         } catch (err) {
@@ -100,7 +100,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'jjencode') {
         try {
-            self.importScripts('/de4js/assets/js/lib/decoder-jjencode/jjdecode.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/jjdecode.js');
 
             source = JJdecode.decode(source);
         } catch (err) {
@@ -108,7 +108,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'urlencode') {
         try {
-            self.importScripts('/de4js/assets/js/lib/js-beautify/unpackers/urlencode_unpacker.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/urlencode_unpacker.js');
 
             if (Urlencoded.detect(source)) source = Urlencoded.unpack(source);
         } catch (err) {
@@ -116,7 +116,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'p_a_c_k_e_r') {
         try {
-            self.importScripts('/de4js/assets/js/lib/js-beautify/unpackers/p_a_c_k_e_r_unpacker.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/p_a_c_k_e_r_unpacker.js');
 
             if (P_A_C_K_E_R.detect(source)) source = P_A_C_K_E_R.unpack(source);
         } catch (err) {
@@ -124,7 +124,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'javascriptobfuscator') {
         try {
-            self.importScripts('/de4js/assets/js/lib/js-beautify/unpackers/javascriptobfuscator_unpacker.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/javascriptobfuscator_unpacker.js');
 
             if (JavascriptObfuscator.detect(source)) source = JavascriptObfuscator.unpack(source);
         } catch (err) {
@@ -132,7 +132,7 @@ self.addEventListener('message', function (e) {
         }
     } else if (packer === 'myobfuscate') {
         try {
-            self.importScripts('/de4js/assets/js/lib/js-beautify/unpackers/myobfuscate_unpacker.js');
+            self.importScripts('https://raw.githack.com/softwebtuts/jsUnpackerFiles/master/myobfuscate_unpacker.js');
 
             if (MyObfuscate.detect(source)) source = MyObfuscate.unpack(source);
         } catch (err) {
